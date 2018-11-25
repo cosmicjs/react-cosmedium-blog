@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
-const Cosmic = require('cosmicjs');
+import { Switch, BrowserRouter, Route } from 'react-router-dom';
+import Signin from './components/auth/Signin';
+import Main from './components/Main';
+
+
 
 class App extends Component {
 
   componentDidMount = () => {
+    const Cosmic = require('cosmicjs')
     var api = new Cosmic();
     var bucket = api.bucket({
       slug:'b20d8c20-f0d6-11e8-a47e-3bb5370873e3'
@@ -20,7 +25,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      Work!
+        <BrowserRouter>
+          <Switch>
+            <Route path={'/'} component={Main} exact />
+            <Route path={'/signin' } component={Signin} />
+          </Switch>
+        </BrowserRouter>
       </div>
     );
   }
