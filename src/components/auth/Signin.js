@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-export default class Signup extends Component {
+import '../../css/Signin.css';
+import { withRouter } from "react-router-dom";
+class Signin extends Component {
 
     state = {
       email: null,
@@ -18,32 +20,32 @@ export default class Signup extends Component {
       password: this.state.password
       }).then(data => {
         console.log(data.token);
-        localStorage.setItem("Token", data.token); // save token to localstorage
+        localStorage.setItem("Token", data.token);
+         // save token to localstorage
       })
       .catch(err => {
         console.log(err)
       })
+     
     }
   render() {
     return (
-      <div style={loginWrap}> 
-        <h1>Login</h1>
-        <form>
+      <div className="signin-container"> 
+        <h1 className="">Login</h1>
+        <form className="login-form">
           <label htmlFor="email">Email:</label>
           <input type="email" name="email" onChange={this.handleChange}/>
           <label htmlFor="password">Password:</label>
           <input type="password" name="password" onChange={this.handleChange}/>
-          <button onClick={this.handleSubmit}>Login</button>
+          <button className="btn" onClick={this.handleSubmit}>Login</button>
+          
         </form>
       </div>
     )
   }
 }
-const loginWrap = {
-  color: 'blue',
-  backgroundColor:'red'
-};
 
+export default Signin;
 
 
 // email: 'qqd8jw5zrj6y@10minut.xyz',

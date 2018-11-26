@@ -1,0 +1,35 @@
+.signin-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:320px;
+    height: 100%;
+    flex-direction: column;
+    margin:0 auto;
+  
+}
+.login-form{
+    display:flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    padding:20px;
+    width:100%;
+    
+}
+
+.btn{
+    padding:15px;
+    margin:10px 0;
+    font-size:1.2rem;
+    cursor: pointer;
+    background:var(--primaryClr);
+    color:white;
+    border:0;
+}
+.login-form input{
+    height: 40px;
+    font-size:1.6rem;
+    margin:6px 0;
+
+}
