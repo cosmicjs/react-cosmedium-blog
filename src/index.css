@@ -1,3 +1,8 @@
+:root{
+  --primaryClr:#292929;
+}
+
+
 body {
   margin: 0;
   padding: 0;
@@ -7,8 +12,30 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+h1{
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+}
+p{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.App{
+  max-width: 1440px;
+  margin:0 auto;
+}
+
+
+/* singin component style */
+/* .singin-container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:1000px;
+  background:red;
+} */
