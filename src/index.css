@@ -1,6 +1,7 @@
 :root{
   --primaryClr:#292929;
   --secondClr:#03a87c;
+  --thirdClr:#0000008a;
 }
 
 
@@ -66,12 +67,15 @@ code {
   outline: none;
   padding:10px;
   font-size: 1rem;
+  cursor: pointer;
  
 }
 .signin{
   text-align: center;
   align-self: center;
   padding-bottom: 3px;
+  color:var(--secondClr);
+  cursor: pointer;
 }
 .search-wrap{
   align-self: center;
@@ -88,4 +92,23 @@ code {
 }
 .fa{
   width:30px;
+  color:var(--thirdClr);
+  cursor: pointer;
+}
+
+
+/* category nav */
+.category-wrap{
+  height: 100px;
+}
+.category-list{
+  padding:0;
+  display:flex;
+  justify-content: space-between;
+  flex-direction: row;
+  list-style-type: none;
+  text-transform: uppercase;
+  align-items:center;
+  font-size:15px;
+  color:var(--thirdClr);
 }
