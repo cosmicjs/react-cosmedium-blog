@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Switch, BrowserRouter, Route } from 'react-router-dom';
 import Signin from './components/auth/Signin';
-import Main from './components/Main';
 import Navbar from './Layout/Navbar';
 import CategoryNav from './Layout/CategoryNav';
+import Main from './components/Main';
 
 
 
@@ -13,7 +13,7 @@ class App extends Component {
     const Cosmic = require('cosmicjs')
     var api = new Cosmic();
     var bucket = api.bucket({
-      slug:'b20d8c20-f0d6-11e8-a47e-3bb5370873e3'
+      slug:'ec055990-f24c-11e8-9231-9b47e8f95b7e'
     })
     bucket.getObjects().then(data => {
      console.log(data);
@@ -26,15 +26,16 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App">
-      <Navbar />
-      <CategoryNav />
-        <BrowserRouter>
-          <Switch>
-            <Route path={'/signin' } component={Signin} />
-          </Switch>
-        </BrowserRouter>
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Navbar />
+          <CategoryNav />
+            <Switch>
+              <Route path={'/' } exact component={Main} />
+              <Route path={'/signin' } component={Signin} />
+            </Switch>
+        </div>
+      </BrowserRouter>
     );
   }
 }
