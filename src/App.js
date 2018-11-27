@@ -31,7 +31,6 @@ class App extends Component {
       <CategoryNav />
         <BrowserRouter>
           <Switch>
-            <Route path={'/'} component={Main} exact />
             <Route path={'/signin' } component={Signin} />
           </Switch>
         </BrowserRouter>

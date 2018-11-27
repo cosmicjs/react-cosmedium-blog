@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import '../../css/Signin.css';
-import { withRouter } from "react-router-dom";
+// import { withRouter } from "react-router-dom";
 class Signin extends Component {
 
     state = {
@@ -21,7 +21,7 @@ class Signin extends Component {
       }).then(data => {
         console.log(data.token);
         localStorage.setItem("Token", data.token);
-        this.props.history.push("/");
+        // this.props.history.push("/");
          // save token to localstorage
       })
       .catch(err => {
@@ -46,7 +46,8 @@ class Signin extends Component {
   }
 }
 
-export default withRouter(Signin);
+// export default withRouter(Signin);
+export default Signin;
 
 
 // email: 'qqd8jw5zrj6y@10minut.xyz',
