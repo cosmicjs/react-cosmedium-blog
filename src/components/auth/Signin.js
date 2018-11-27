@@ -21,6 +21,7 @@ class Signin extends Component {
       }).then(data => {
         console.log(data.token);
         localStorage.setItem("Token", data.token);
+        this.props.history.push("/");
          // save token to localstorage
       })
       .catch(err => {
@@ -37,15 +38,15 @@ class Signin extends Component {
           <input type="email" name="email" onChange={this.handleChange}/>
           <label htmlFor="password">Password:</label>
           <input type="password" name="password" onChange={this.handleChange}/>
-          <button className="btn" onClick={this.handleSubmit}>Login</button>
-          
+          <button className="btn" onClick={this.handleSubmit}><div className="overlay"></div>Login</button>
+         
         </form>
       </div>
     )
   }
 }
 
-export default Signin;
+export default withRouter(Signin);
 
 
 // email: 'qqd8jw5zrj6y@10minut.xyz',
