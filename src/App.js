@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Switch, BrowserRouter, Route } from 'react-router-dom';
 import Signin from './components/auth/Signin';
 import Main from './components/Main';
+import Navbar from './Layout/Navbar';
+import CategoryNav from './Layout/CategoryNav';
 
 
 
@@ -25,9 +27,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <Navbar />
+      <CategoryNav />
         <BrowserRouter>
           <Switch>
-            <Route path={'/'} component={Main} exact />
             <Route path={'/signin' } component={Signin} />
           </Switch>
         </BrowserRouter>
