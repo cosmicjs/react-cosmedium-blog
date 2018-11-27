@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import '../../css/Signin.css';
 // import { withRouter } from "react-router-dom";
+// import { Redirect } from 'react-router-dom'
 class Signin extends Component {
 
     state = {
@@ -23,6 +24,7 @@ class Signin extends Component {
         localStorage.setItem("Token", data.token);
         // this.props.history.push("/");
          // save token to localstorage
+
       })
       .catch(err => {
         console.log(err)

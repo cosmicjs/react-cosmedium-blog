@@ -1,0 +1,25 @@
+.content-wrap{
+    width: 100%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr;
+    font-size:0.7rem;
+}
+
+.card-wrap:nth-child(1){
+    /* border:2px solid pink; */
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-size:1rem;
+}
+
+.card-wrap:nth-child(2){
+    /* border:2px solid rgb(141, 21, 41); */
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    font-size:1rem;
+}

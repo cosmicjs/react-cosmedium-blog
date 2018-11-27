@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Switch, BrowserRouter, Route } from 'react-router-dom';
+// import { connect } from 'react-redux';
+
+
 import Signin from './components/auth/Signin';
 import Navbar from './Layout/Navbar';
 import CategoryNav from './Layout/CategoryNav';
@@ -29,7 +32,7 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Navbar />
-          <CategoryNav />
+       
             <Switch>
               <Route path={'/' } exact component={Main} />
               <Route path={'/signin' } component={Signin} />
@@ -40,4 +43,5 @@ class App extends Component {
   }
 }
 
-export default App;
+
+export default (App);
