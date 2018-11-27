@@ -1,5 +1,6 @@
 :root{
   --primaryClr:#292929;
+  --secondClr:#03a87c;
 }
 
 
@@ -28,14 +29,63 @@ code {
 .App{
   max-width: 1440px;
   margin:0 auto;
+  padding: 0 20px;
 }
 
 
-/* singin component style */
-/* .singin-container{
+
+
+
+/* Navbar style component */
+
+.navbar-wrap{
   display:flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width:1000px;
-  background:red;
-} */
+  height: 100px;
+  color:var(--primaryClr);
+  flex-wrap: wrap;
+  /* border:1px solid pink; */
+}
+
+.right-side{
+  display:grid;
+  grid-template-columns: 190px 90px 110px;
+  grid-column-gap: 10px;
+  grid-template-rows: 1fr;
+  font-size: 16px;
+}
+.btn-join{
+  width: 110px;
+  box-sizing: border-box;
+  height: 40px;
+  border: 1px solid var(--secondClr);
+  color: var(--secondClr);
+  background: transparent;
+  border-radius: 5px;
+  outline: none;
+  padding:10px;
+  font-size: 1rem;
+ 
+}
+.signin{
+  text-align: center;
+  align-self: center;
+  padding-bottom: 3px;
+}
+.search-wrap{
+  align-self: center;
+  justify-self: right;
+  height: 30px;
+}
+.search-input{
+  background:rgba(207, 207, 207, 0.164);
+  width: 160px;
+  height:100%;
+  box-sizing: border-box;
+  border: none;
+  outline: none; 
+}
+.fa{
+  width:30px;
+}

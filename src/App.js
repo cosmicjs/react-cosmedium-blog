@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Switch, BrowserRouter, Route } from 'react-router-dom';
 import Signin from './components/auth/Signin';
 import Main from './components/Main';
+import Navbar from './Layout/Navbar';
 
 
 
@@ -25,6 +26,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <Navbar />
         <BrowserRouter>
           <Switch>
             <Route path={'/'} component={Main} exact />
