@@ -1,7 +1,9 @@
 const initState = {
   posts: [] ,
   categories: ["Film", "Books"],
-  ads:[]
+  ads:[],
+  category: [],
+  link: null
 }
 const postReducer = (state = initState, action) => {
     console.log("Reducer running", action );
@@ -17,9 +19,12 @@ const postReducer = (state = initState, action) => {
             categories: action.data.objects.filter(cat => {
                 return(cat.type_slug === "categories") 
               }),
-              ads: action.data.objects.find(cat => {
-                return(cat.type_slug === "ads") 
+              ads: action.data.objects.find(name => {
+                return(name.type_slug === "ads") 
               }),
+            link: action.data.objects.find(name => {
+              return(name.type_slug === "ads") 
+            }),
         }
         default:
             return state;
