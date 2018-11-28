@@ -1,18 +1,25 @@
 import React from 'react'
-
-export default function CategoryNav() {
+import { connect } from 'react-redux';
+function CategoryNav(props) {
+  console.log("Category",props.categories);
   return (
     <div className="category-wrap">
       <ul className="category-list">
-          <li>Sport</li>
-          <li>Film</li>
-          <li>Book</li>
-          <li>Music</li>
-          <li>Cars</li>
-          <li>Passion</li>
-          <li>Travel</li>
-          <li>Programming</li>
+        {
+          props.categories && props.categories.map((category,key) =>{
+            return(
+              <li key={key}>{category.title}</li>
+            )
+        })
+        }
       </ul>
     </div>
   )
 }
+const mapStateToProps = (state) => {
+  console.log("Category map", state.posts.categories);
+  return{
+    categories : state.posts.categories
+  }
+}
+export default connect(mapStateToProps) (CategoryNav)
