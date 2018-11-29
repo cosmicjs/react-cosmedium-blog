@@ -152,4 +152,9 @@ a{
     text-align:left;
     width: 140px;
   }
+  .category-list{
+   
+    overflow-x: hidden;
+    
+  }
 }
