@@ -9,7 +9,7 @@ function CategoryNav(props) {
         {
           props.categories && props.categories.map((category,key) =>{
             return(
-              <Link key={key} to={'/category/' + category.slug }>{category.title}</Link>
+              <Link  key={key} to={'/category/' + category.slug }> <li className="item">{category.title}</li> </Link>
             )
         })
         }

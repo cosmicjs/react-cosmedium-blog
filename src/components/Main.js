@@ -51,13 +51,6 @@ import Category from './Category';
         }
         <div>
           <h1>Film</h1>
-          {/* {
-            this.props.postCategory.map((item, index) => {
-            return(
-              <h2 key={index}>{item.title}</h2> )
-          
-          })
-          } */}
           <Category />
         </div>
       </div>

@@ -99,8 +99,10 @@ a{
 
 
 /* category nav */
-/* .category-wrap{
+.category-wrap{
   height: 100px;
+  box-sizing: border-box;
+  padding-top: 20px;
 }
 .category-list{
   padding:0;
@@ -110,6 +112,11 @@ a{
   list-style-type: none;
   text-transform: uppercase;
   align-items:center;
-  font-size:15px;
+  font-size:1rem;
   color:var(--thirdClr);
-} */
+  overflow-x: scroll;
+  
+}
+.item{
+  padding: 0 10px;
+}
