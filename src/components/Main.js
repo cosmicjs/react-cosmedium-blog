@@ -18,7 +18,7 @@ import Category from './Category';
                <Link to={'/' + post.slug}> <h2 className="card-title">{post.title}</h2></Link>
                {post.content.length < 50 ? <p className="card-body" dangerouslySetInnerHTML={{__html:post.content}}></p> : 
                <p className="card-body" dangerouslySetInnerHTML={{__html:post.content.substring(0,50)}}></p> }
-               <span>{post.created_at}</span>
+               <span className="date">{post.created_at}</span>
                 
               </div>
             </div>
@@ -38,10 +38,10 @@ import Category from './Category';
       </div>
       {
       this.props.posts.ads ?
-      <div>
+      <div className="page">
         <h2>{ this.props.posts.ads.title}</h2>
         <p dangerouslySetInnerHTML={{__html:this.props.posts.ads.content}} ></p>
-        <img src={this.props.posts.ads.metadata ? this.props.posts.ads.metadata.image.url : "#" } alt="img"/>
+        {/* <img src={this.props.posts.ads.metadata ? this.props.posts.ads.metadata.image.url : "#" } alt="img"/> */}
        {
         console.log("Link", this.props.posts.ads.metadata)
        }

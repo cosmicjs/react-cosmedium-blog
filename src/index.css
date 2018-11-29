@@ -39,7 +39,9 @@ a{
 /* Navbar style component */
 
 .navbar-wrap{
+  
   display:flex;
+  display:none;
   justify-content: space-between;
   align-items: center;
   height: 100px;
@@ -97,7 +99,7 @@ a{
 
 
 /* category nav */
-.category-wrap{
+/* .category-wrap{
   height: 100px;
 }
 .category-list{
@@ -110,4 +112,4 @@ a{
   align-items:center;
   font-size:15px;
   color:var(--thirdClr);
-}
+} */

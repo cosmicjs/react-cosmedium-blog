@@ -9,6 +9,7 @@ import Main from './components/Main';
 import { FetchPostsApi } from './store/actions/PostsAction';
 import SinglePost from './components/SinglePost';
 import Category from './components/Category';
+import Categories from './components/Categories';
 
 class App extends Component {
 
@@ -23,6 +24,7 @@ class App extends Component {
             <Switch>
               <Route path={'/' } exact component={Main} />
               <Route path={'/signin'} component={Signin} />
+              <Route path={'/category'} exact component={Categories} />
               <Route path={'/category/:category_slug'} exact component={Category} />
               <Route path={'/:post_slug'} component={SinglePost} />
               

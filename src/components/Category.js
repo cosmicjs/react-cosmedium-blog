@@ -9,7 +9,12 @@ import { Link } from 'react-router-dom';
        {
           props.postCategory &&  props.postCategory.map((item, index) => {
             return(
-              <h2 key={index}>{item.title}</h2> )
+            <div key={index}>
+            <Link to={'/' + item.slug}> <h2>{item.title}</h2></Link> 
+            <p dangerouslySetInnerHTML={{__html:item.content}}></p>
+            </div>
+              )
+
           })
           }
     </div>
