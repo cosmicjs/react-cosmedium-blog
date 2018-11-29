@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
 import CategoryNav from './../Layout/CategoryNav'
 import '../css/Main.css';
+import Category from './Category';
  class Main extends Component {
   render() {
   const { posts } = this.props.posts;
@@ -50,12 +51,14 @@ import '../css/Main.css';
         }
         <div>
           <h1>Film</h1>
-          {
+          {/* {
             this.props.postCategory.map((item, index) => {
             return(
               <h2 key={index}>{item.title}</h2> )
+          
           })
-          }
+          } */}
+          <Category />
         </div>
       </div>
     )
@@ -65,9 +68,9 @@ const mapStateToProps = (state) => {
   return{
     posts: state.posts,
     ads: state.ads,
-    postCategory:state.posts.posts.filter(cat => {
-      return cat.metadata.category.slug ===  'film'      
-  })
+  //   postCategory:state.posts.posts.filter(cat => {
+  //     return cat.metadata.category.slug ===  'film'      
+  // })
   }
 }
 export default connect(mapStateToProps)(Main);

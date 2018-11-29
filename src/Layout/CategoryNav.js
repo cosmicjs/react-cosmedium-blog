@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux';
+import {Link } from 'react-router-dom'
 function CategoryNav(props) {
   console.log("Category",props.categories);
   return (
@@ -8,7 +9,7 @@ function CategoryNav(props) {
         {
           props.categories && props.categories.map((category,key) =>{
             return(
-              <li key={key}>{category.title}</li>
+              <Link key={key} to={'/category/' + category.slug }>{category.title}</Link>
             )
         })
         }
