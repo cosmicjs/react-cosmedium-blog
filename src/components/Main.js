@@ -6,6 +6,7 @@ import '../css/Main.css';
 import Category from './Category';
  class Main extends Component {
   render() {
+    console.log("Ads: ",this.props);
   const { posts } = this.props.posts;
   const postList = posts.length ? (
       posts.map((post)=> {
@@ -16,8 +17,7 @@ import Category from './Category';
                </span>
               <div className="card">
                <Link to={'/' + post.slug}> <h2 className="card-title">{post.title}</h2></Link>
-               {post.content.length < 50 ? <p className="card-body" dangerouslySetInnerHTML={{__html:post.content}}></p> : 
-               <p className="card-body" dangerouslySetInnerHTML={{__html:post.content.substring(0,50)}}></p> }
+          {post.metadata.snipped && <p className="card-body" dangerouslySetInnerHTML={{__html:post.metadata.snipped}}></p> }
                <span className="date">{post.created_at}</span>
                 
               </div>
@@ -36,21 +36,22 @@ import Category from './Category';
       <div className="content-wrap">
         {postList}
       </div>
+      <hr/>
       {
       this.props.posts.ads ?
       <div className="page">
-        <h2>{ this.props.posts.ads.title}</h2>
-        <p dangerouslySetInnerHTML={{__html:this.props.posts.ads.content}} ></p>
-        {/* <img src={this.props.posts.ads.metadata ? this.props.posts.ads.metadata.image.url : "#" } alt="img"/> */}
-       {
-        console.log("Link", this.props.posts.ads.metadata)
-       }
+        <div className="page-overlay">
+          <h2>{ this.props.posts.ads.title}</h2>
+          <p dangerouslySetInnerHTML={{__html:this.props.posts.ads.content}} ></p>
+        </div>
+        <img className="ads-image" src={this.props.posts.ads.metadata ? this.props.posts.ads.metadata.image.url : "#" } alt="img"/>
         </div>
         :
-        <p>No posts</p>
+        <p>No page</p>
         }
         <div>
-          <h1>Film</h1>
+          <h1 className="category-title">Film</h1>
+          <hr/>
           <Category />
         </div>
       </div>
@@ -58,12 +59,11 @@ import Category from './Category';
   }
 }
 const mapStateToProps = (state) => {
+  
   return{
     posts: state.posts,
     ads: state.ads,
-  //   postCategory:state.posts.posts.filter(cat => {
-  //     return cat.metadata.category.slug ===  'film'      
-  // })
+ 
   }
 }
 export default connect(mapStateToProps)(Main);

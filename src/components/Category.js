@@ -2,6 +2,8 @@ import React from 'react'
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
+import '../css/Category.css';
+
  function Category(props) {
     
   return (
@@ -9,11 +11,17 @@ import { Link } from 'react-router-dom';
        {
           props.postCategory &&  props.postCategory.map((item, index) => {
             return(
-            <div key={index}>
-            <Link to={'/' + item.slug}> <h2>{item.title}</h2></Link> 
-            <p dangerouslySetInnerHTML={{__html:item.content}}></p>
+            <div key={index} className="main-category-wrap">
+            {item && <img className="category-image" src={item.metadata.image.url} alt={item.slug}/> }
+           <div className="category-text-wrap">
+           <Link to={'/' + item.slug}> <h2>{item.title}</h2></Link> 
+           { item.length < 300 ? 
+           <p dangerouslySetInnerHTML={{__html:item.content}}></p> :
+           <p dangerouslySetInnerHTML={{__html:item.content.substring(0, 300)}}></p> 
+           }
+           </div>
             </div>
-              )
+            )
 
           })
           }
