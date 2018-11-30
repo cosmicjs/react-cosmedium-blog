@@ -21,14 +21,15 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Navbar />
+            <div className="app-wrap">
             <Switch>
               <Route path={'/' } exact component={Main} />
               <Route path={'/signin'} component={Signin} />
               <Route path={'/category'} exact component={Categories} />
               <Route path={'/category/:category_slug'} exact component={Category} />
               <Route path={'/:post_slug'} component={SinglePost} />
-              
             </Switch>
+            </div>
         </div>
       </BrowserRouter>
     );
