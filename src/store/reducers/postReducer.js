@@ -3,7 +3,7 @@ const initState = {
   categories: ["Film", "Books"],
   ads:[],
   category: [],
-  link: null
+  link: null,
 }
 const postReducer = (state = initState, action) => {
     console.log("Reducer running", action );
@@ -26,6 +26,7 @@ const postReducer = (state = initState, action) => {
               return(name.type_slug === "ads") 
             }),
         }
+    
         default:
             return state;
         
