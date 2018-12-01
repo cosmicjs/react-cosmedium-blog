@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-export default function Navbar() {
+import Input from '../components/Input';
 
+ function Navbar(props) {
+    console.log("Search", props.search);
   return (
  <div className="wrap-to-border">
         <div className="navbar-wrap">
@@ -11,7 +13,7 @@ export default function Navbar() {
         <div className="right-side">
             <div className="search-wrap">
                 <i className="fa fa-search fa-lg" aria-hidden="true"></i>
-                <input type="text" className="search-input" placeholder=" Search site" />
+               <Input />
              </div>
             <Link to="/signin" className="signin">Sign in</Link>
             <button className="btn-join">Get started</button>
@@ -20,3 +22,5 @@ export default function Navbar() {
  </div>
   )
 }
+
+export default(Navbar);
