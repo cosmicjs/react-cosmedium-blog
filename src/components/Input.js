@@ -1,17 +1,24 @@
 import React, { Component } from 'react'
-
-class Input extends Component {
-
-search = (e) =>{
-    console.log("Work", e.target.value);
-}
-
+import { connect } from 'react-redux'
+ class Input extends Component {
   render() {
     return (
-     
-         <input type="text" className="search-input" placeholder=" Search site" onChange={this.search}/>
-     
+  
+        <input type="text"  placeholder="Search.. " className="search-input" value={this.props.input} onChange={this.props.handleInput}/>
+  
     )
   }
 }
-export default Input;
+const mapStateToProps = (state) => {
+    return{
+        input: state.input
+    }
+}
+const mapDispatchToProps = (dispatch) => {
+    return{
+        handleInput: (e) => {
+            dispatch({type:'SEARCH_INPUT', input:e.target.value})
+        }
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Input);

@@ -1,0 +1,23 @@
+.search-list{
+    background: #ebebeb;
+    z-index: 900;
+    position: absolute;
+    top:50px;
+    left:0;
+    width:250px;
+    padding: 0 50px;
+
+}
+.box{
+    background: #ebebeb;
+    width: 30px;
+    height: 30px;
+    transform: rotate(45deg);
+}
+.it{
+    margin:20px 0;
+    transition: all .4s ease-in-out;
+}
+.it:hover{
+    color:var(--thirdClr);
+}

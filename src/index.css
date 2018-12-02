@@ -90,6 +90,7 @@ a{
     align-self: center;
     justify-self: right;
     height: 30px;
+    position: relative;
     
   }
   .search-input{
