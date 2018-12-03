@@ -21,23 +21,25 @@
     grid-row-end: 2;
   
 }
-.page-container h3{
+.page-container h3 a{
     color:var(--secondClr);
     text-transform: uppercase;
 }
 .page-container h4{
     color:var(--thirdClr);
-    font-weight: 400;
+    font-weight: 300;
     font-size:1.45rem;
     line-height: 28px;
     
 }
-.text-page{
+
+.text-page p{
     font-size:1.35rem;
     line-height: 33px;
     margin-bottom: 5%;
-    
+    font-weight: 300;    
 }
+
 .side-bar{
     justify-self:center;
     
@@ -46,6 +48,7 @@
 .fa{
     color:var(--primaryClr);
 }
+
 em, u{
     font-weight: 300;
     padding:10px
