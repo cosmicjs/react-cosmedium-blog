@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import CategoryNav from './../Layout/CategoryNav'
 import '../css/Main.css';
 import Category from './Category';
+import Loader from '../Layout/Loader';
 
  class Main extends Component {
   render() {
@@ -28,8 +29,8 @@ import Category from './Category';
   ) 
   : 
   (
-      <div className="text-center"> No posts yet </div>
-      // <Loader />
+      // <div className="text-center"> No posts yet </div>
+     <Loader />
   )
   return (
     <div>

@@ -19,7 +19,8 @@ import moment from 'moment';
      <div className="side-bar">
         <div className="vote-container">
         <i className="fa fa-thumbs-o-up fa-2x" aria-hidden="true"></i> 
-     <span className="vote">(22) </span>
+     <span className="vote">(22) </span> 
+     {/* required paiment plan to add request to cosmic */}
         </div>
      </div>
     </div>

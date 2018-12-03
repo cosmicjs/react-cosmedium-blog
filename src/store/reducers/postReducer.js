@@ -8,10 +8,10 @@ const initState = {
   value:'',
 }
 const postReducer = (state = initState, action) => {
-    console.log("Reducer running", action );
+ 
     switch(action.type) {
         case 'FETCH_POSTS': 
-        console.log("Reducer1: ",action.data);
+      
         const posts = action.data.objects.filter(item => {
             return(item.type_slug === "posts") 
           }).splice(0,5);
