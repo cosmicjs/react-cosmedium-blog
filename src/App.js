@@ -10,11 +10,15 @@ import { FetchPostsApi } from './store/actions/PostsAction';
 import SinglePost from './components/SinglePost';
 import Category from './components/Category';
 import Categories from './components/Categories';
+import Footer from './Layout/Footer';
+// import AddUser from './components/auth/AddUser';
+import Site from './components/Site';
 
 class App extends Component {
 
   componentDidMount = () => {
     this.props.fetchPosts();
+ 
   }
   render() {
     return (
@@ -24,12 +28,16 @@ class App extends Component {
             <div className="app-wrap">
             <Switch>
               <Route path={'/' } exact component={Main} />
-              <Route path={'/signin'} component={Signin} />
+              <Route path={'/signin'} exact component={Signin} />
               <Route path={'/category'} exact component={Categories} />
+              <Route path={'/site'} exact component={Site} />
+              {/* <Route path={'/add-user'} exact component={AddUser} /> */}
               <Route path={'/category/:category_slug'} exact component={Category} />
-              <Route path={'/:post_slug'} component={SinglePost} />
+              <Route path={'/:post_slug'} exact component={SinglePost} />
+             
             </Switch>
             </div>
+            <Footer />
         </div>
       </BrowserRouter>
     );

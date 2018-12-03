@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom'
 import CategoryNav from './../Layout/CategoryNav'
 import '../css/Main.css';
 import Category from './Category';
+import Loader from '../Layout/Loader';
+import Button from './Button';
+
  class Main extends Component {
   render() {
-    console.log("Ads: ",this.props);
   const { posts } = this.props.posts;
   const postList = posts.length ? (
       posts.map((post)=> {
@@ -17,7 +19,9 @@ import Category from './Category';
                </span>
               <div className="card">
                <Link to={'/' + post.slug}> <h2 className="card-title">{post.title}</h2></Link>
-          {post.metadata.snipped && <p className="card-body" dangerouslySetInnerHTML={{__html:post.metadata.snipped}}></p> }
+          {post.metadata.snipped &&  post.metadata.snipped.length < 80 ?  <p className="card-body" dangerouslySetInnerHTML={{__html:post.metadata.snipped}}></p> :
+           <p className="card-body" dangerouslySetInnerHTML={{__html: post.metadata.snipped && post.metadata.snipped.slice(0,80)}}></p> 
+        }
                <span className="date">{post.created_at}</span>
                 
               </div>
@@ -28,7 +32,8 @@ import Category from './Category';
   ) 
   : 
   (
-      <div className="text-center"> No posts yet </div>
+      // <div className="text-center"> No posts yet </div>
+     <Loader />
   )
   return (
     <div>
@@ -41,8 +46,9 @@ import Category from './Category';
       this.props.posts.ads ?
       <div className="page">
         <div className="page-overlay">
-          <h2>{ this.props.posts.ads.title}</h2>
+          <h1>{ this.props.posts.ads.title}</h1>
           <p dangerouslySetInnerHTML={{__html:this.props.posts.ads.content}} ></p>
+          <Button title={"See more"} />
         </div>
         <img className="ads-image" src={this.props.posts.ads.metadata ? this.props.posts.ads.metadata.image.url : "#" } alt="img"/>
         </div>
@@ -50,10 +56,11 @@ import Category from './Category';
         <p>No page</p>
         }
         <div>
-          <h1 className="category-title">Film</h1>
+       { posts && <h2 className="category-title">FILM</h2>}
           <hr/>
           <Category />
         </div>
+      
       </div>
     )
   }
@@ -63,7 +70,6 @@ const mapStateToProps = (state) => {
   return{
     posts: state.posts,
     ads: state.ads,
- 
   }
 }
 export default connect(mapStateToProps)(Main);

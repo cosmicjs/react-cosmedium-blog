@@ -4,7 +4,7 @@
     grid-column-gap: 20px;
 }
 .page{
-    margin:5% 3%;
+    margin:5% 0%;
     position: relative;
     font-size: 0.9rem;
     max-height: 400px;
@@ -14,10 +14,20 @@
     position: absolute;
     top:0;
     left:0;
-    padding:5% 50% 5% 5%;
+    padding:3% 40% 3% 3%;
     overflow: hidden;
 
 }
+
+  .page p{
+    line-height: 20px;
+    font-size: 12px;
+  }
+  .page h1{
+    font-size: 1.2rem;
+    line-height: 28px;
+    font-weight: 700;
+  }
 hr{
  border:0.5px solid rgba(0, 0, 0, 0.068);
  margin-top:0;
@@ -27,6 +37,7 @@ hr{
     color: var(--thirdClr);
 }
 .card-wrap p{
+    font-family: 'Segoe UI', 'Open Sans', sans-serif;
     color: var(--thirdClr);
     font-size:1rem;
 }
@@ -83,6 +94,15 @@ hr{
     .card-wrap:nth-child(1) .card{
         align-self: center;
     }
+    .page p{
+        line-height: 24px;
+        font-size: 1rem;
+      }
+      .page h1{
+        font-size: 2.65rem;
+        line-height: 48px;
+        font-weight: 700;
+      }
     
 }
 

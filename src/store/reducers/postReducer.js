@@ -5,13 +5,13 @@ const initState = {
   category: [],
   link: null,
   newList:[],
-  value:''
+  value:'',
 }
 const postReducer = (state = initState, action) => {
-    console.log("Reducer running", action );
+ 
     switch(action.type) {
         case 'FETCH_POSTS': 
-        console.log("Reducer1: ",action.data);
+      
         const posts = action.data.objects.filter(item => {
             return(item.type_slug === "posts") 
           }).splice(0,5);
@@ -37,8 +37,7 @@ const postReducer = (state = initState, action) => {
           ...state,
           newList: newList,
           value:action.input
-        }
-    
+        }  
         default:
             return state;
         

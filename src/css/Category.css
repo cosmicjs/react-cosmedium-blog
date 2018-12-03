@@ -1,9 +1,9 @@
 
 .main-category-wrap{
     display:grid;
-  
     grid-gap:30px;
     margin: 5% 0;
+    
 }
 .category-image{
     width:100%;
@@ -11,6 +11,9 @@
 }
 .main-category-wrap h2{
     margin:0;
+}
+.main-category-wrap p {
+    line-height: 26px;
 }
 
 @media(min-width:750px) {
