@@ -5,7 +5,7 @@ import '../css/SearchList.css'
  function SearchList(props) {
      console.log("Search list" , props.lists);
   return (
-    <div className="search-list"> 
+   <div className="search-list"> 
     <span className="box"></span>
          {
            props.value && props.lists.map((item, index) => {
@@ -22,9 +22,9 @@ import '../css/SearchList.css'
 const mapStateToProps = (state) => {
     return{
         lists: state.posts.newList,
-        value: state.posts.value
+        value: state.posts.value,
+        stat: state.posts.stat
      
     }
 }
-
 export default connect(mapStateToProps)(SearchList);

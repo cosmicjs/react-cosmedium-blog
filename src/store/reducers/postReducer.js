@@ -5,7 +5,7 @@ const initState = {
   category: [],
   link: null,
   newList:[],
-  value:''
+  value:'',
 }
 const postReducer = (state = initState, action) => {
     console.log("Reducer running", action );
@@ -37,8 +37,7 @@ const postReducer = (state = initState, action) => {
           ...state,
           newList: newList,
           value:action.input
-        }
-    
+        }  
         default:
             return state;
         

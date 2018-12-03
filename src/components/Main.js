@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 import CategoryNav from './../Layout/CategoryNav'
 import '../css/Main.css';
 import Category from './Category';
+
  class Main extends Component {
   render() {
-    console.log("Ads: ",this.props);
   const { posts } = this.props.posts;
   const postList = posts.length ? (
       posts.map((post)=> {
@@ -29,6 +29,7 @@ import Category from './Category';
   : 
   (
       <div className="text-center"> No posts yet </div>
+      // <Loader />
   )
   return (
     <div>
@@ -50,7 +51,7 @@ import Category from './Category';
         <p>No page</p>
         }
         <div>
-          <h1 className="category-title">Film</h1>
+       { posts && <h2 className="category-title">FILM</h2>}
           <hr/>
           <Category />
         </div>
@@ -63,7 +64,6 @@ const mapStateToProps = (state) => {
   return{
     posts: state.posts,
     ads: state.ads,
- 
   }
 }
 export default connect(mapStateToProps)(Main);

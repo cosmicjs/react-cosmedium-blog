@@ -134,7 +134,19 @@ a{
     width: 100%;
     text-align:center;
   }
-
+.loader-overlay{
+  position: absolute;
+  width:100vw;
+  height: 100vh;
+  z-index: 999;
+  left:0;
+  top:0;
+  right:0;
+  background:rgba(255, 255, 255);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
 
 @media(min-width:460px) {
 
