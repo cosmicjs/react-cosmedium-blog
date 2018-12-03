@@ -5,6 +5,7 @@ import CategoryNav from './../Layout/CategoryNav'
 import '../css/Main.css';
 import Category from './Category';
 import Loader from '../Layout/Loader';
+import Button from './Button';
 
  class Main extends Component {
   render() {
@@ -43,8 +44,9 @@ import Loader from '../Layout/Loader';
       this.props.posts.ads ?
       <div className="page">
         <div className="page-overlay">
-          <h2>{ this.props.posts.ads.title}</h2>
+          <h1>{ this.props.posts.ads.title}</h1>
           <p dangerouslySetInnerHTML={{__html:this.props.posts.ads.content}} ></p>
+          <Button title={"See more"} />
         </div>
         <img className="ads-image" src={this.props.posts.ads.metadata ? this.props.posts.ads.metadata.image.url : "#" } alt="img"/>
         </div>
@@ -56,6 +58,7 @@ import Loader from '../Layout/Loader';
           <hr/>
           <Category />
         </div>
+      
       </div>
     )
   }

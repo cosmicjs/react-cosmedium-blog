@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import { Link } from 'react-router-dom';
 import Input from '../components/Input';
 import SearchList from '../components/SearchList';
+import Button from '../components/Button';
 class Navbar extends Component {
 render(){
   return (
@@ -17,7 +18,7 @@ render(){
                <SearchList/>
              </div>
             <Link to="/signin" className="signin">Sign in</Link>
-            <button className="btn-join">Get started</button>
+            <Button title={"Get started"} />
         </div>
     </div>
  </div>

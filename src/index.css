@@ -32,10 +32,12 @@ a{
   max-width: 1200px;
   margin:0 auto;
   padding: 0 20px;
+  min-height: calc(100vh - 200px);
 }
 .App{
- 
+ position: relative;
  max-width: 100%;
+
 }
 
 .wrap-to-border{
@@ -122,10 +124,13 @@ a{
     list-style-type: none;
     text-transform: uppercase;
     align-items: center;
-    font-size:1rem;
+    font-size:0.95rem;
     color:var(--thirdClr);
     overflow-x: scroll;
     height: 100%;
+  }
+  .category-list a{
+    color:var(--thirdClr);
   }
   .item{
     padding: 0 10px;
@@ -146,6 +151,20 @@ a{
   display:flex;
   justify-content: center;
   align-items: center;
+}
+.footer{
+  height: 200px;
+  width: 100%;
+  background:#1F1F1F;
+  color:rgba(255, 255, 255, 0.534);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  
+}
+.site{
+  height: 700px;
 }
 
 @media(min-width:460px) {
@@ -174,7 +193,7 @@ a{
     width: 140px;
   }
   .category-list{
-   
+    color:var(--thirdClr);
     overflow-x: hidden;
     
   }
