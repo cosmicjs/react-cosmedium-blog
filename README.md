@@ -1,3 +1,27 @@
+# Blog layout inspired by Medium.com 
+
+<hr/>
+
+# Content menagement by CosmicJS
+- ReactJS
+- Redux
+- HTML
+- CSS
+- AdobeXD
+- (RWD - mobile, tablet, desktop) / css-grid, media 
+- CMS from [Cosmic JS](https://cosmicjs.com/)
+
+# [DEMO](https://cosmicjs.com/apps/react-book-app/demo)
+![Full](https://github.com/3ndrius/react-blog/blob/master/img/cos.jpeg?raw=true)
+![Tablet](https://github.com/3ndrius/react-blog/blob/master/img/ipad-pro-mockup-scene.jpeg?raw=true)
+![mobile-single](https://github.com/3ndrius/react-blog/blob/master/img/ipad.jpeg?raw=true)
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
