@@ -29,9 +29,10 @@ class App extends Component {
             <Switch>
               <Route path={'/' } exact component={Main} />
               <Route path={'/signin'} exact component={Signin} />
+              {/* <Route path={'/add-user'} exact component={AddUser} /> */}
               <Route path={'/category'} exact component={Categories} />
               <Route path={'/site'} exact component={Site} />
-              {/* <Route path={'/add-user'} exact component={AddUser} /> */}
+              
               <Route path={'/category/:category_slug'} exact component={Category} />
               <Route path={'/:post_slug'} exact component={SinglePost} />
              

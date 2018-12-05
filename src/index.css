@@ -116,6 +116,19 @@ a{
     height: 70px;
     box-sizing: border-box;
   }
+  .sticky{
+    position: fixed;
+    top:0; left:0;
+    background:white;
+    height: 70px;
+    z-index: 9999;
+    right:0;
+    margin:0 auto;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,.04);
+  }
+  .padding-sticky{
+    padding-top:90px;
+  }
   .category-list{
     padding:0;
     display:flex;
@@ -128,6 +141,8 @@ a{
     color:var(--thirdClr);
     overflow-x: scroll;
     height: 100%;
+    max-width: 1200px;
+    margin:0 auto;
   }
   .category-list a{
     color:var(--thirdClr);
