@@ -5,18 +5,21 @@ import '../css/SearchList.css'
  function SearchList(props) {
      console.log("Search list" , props.lists);
   return (
-   <div className="search-list"> 
-    <span className="box"></span>
+ <div className="search-list">
+       <div className="suggestions"> 
          {
            props.value && props.lists.map((item, index) => {
                  return(
-                    <Link key={index} to={'/' + item.slug}>
+                   <li>
+                        <Link key={index} to={'/' + item.slug}>
                     <div className="it">{item.title}</div>
                     </Link> 
+                   </li>
                  )
              })
          }
       </div>
+ </div>
   )
 }
 const mapStateToProps = (state) => {

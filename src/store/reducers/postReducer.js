@@ -14,10 +14,10 @@ const postReducer = (state = initState, action) => {
       
         const posts = action.data.objects.filter(item => {
             return(item.type_slug === "posts") 
-          }).splice(0,5);
+          });
         return{
             ...state,
-            posts: posts,
+            posts: posts.splice(0,5),
             categories: action.data.objects.filter(cat => {
                 return(cat.type_slug === "categories") 
               }),
