@@ -8,6 +8,26 @@ import Loader from '../Layout/Loader';
 import Button from './Button';
 import LazyLoad from 'react-lazy-load';
  class Main extends Component {
+
+  componentDidMount = () => {
+   const catBar = document.querySelector('.category-wrap');
+   const container = document.querySelector('.content-wrap');
+   document.addEventListener('scroll', () => {
+    //  console.log("inner height", window.innerHeight, document.body.clientHeight,window.pageYOffset);
+     if(window.pageYOffset > 90 ) {
+      
+      container.classList.add('padding-sticky');
+      catBar.classList.add('sticky');
+     }
+     else{
+      container.classList.remove('padding-sticky');
+      catBar.classList.remove('sticky');
+      
+     }
+   
+   });
+  }
+
   render() {
   const { posts } = this.props;
   const postList = posts.length ? (

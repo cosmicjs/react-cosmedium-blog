@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom';
 import '../css/SearchList.css'
  function SearchList(props) {
-     console.log("Search list" , props.lists);
+    
   return (
  <div className="search-list">
        <div className="suggestions"> 
