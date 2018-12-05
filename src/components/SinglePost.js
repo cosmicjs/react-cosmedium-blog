@@ -20,7 +20,7 @@ import { Link } from 'react-router-dom';
         <div className="vote-container">
         <i className="fa fa-thumbs-o-up fa-2x" aria-hidden="true"></i> 
      <span className="vote">(22) </span> 
-     {/* required paiment plan to add request to cosmic */}
+     {/* required paiment plan to add post request to cosmic */}
         </div>
      </div>
     </div>

@@ -6,7 +6,7 @@ import '../css/Main.css';
 import Category from './Category';
 import Loader from '../Layout/Loader';
 import Button from './Button';
-
+import LazyLoad from 'react-lazy-load';
  class Main extends Component {
   render() {
   const { posts } = this.props;
@@ -15,7 +15,9 @@ import Button from './Button';
           return(
               <div key={post._id} className="card-wrap">
                <span className="pos">
+               <LazyLoad  offsetVertical={1000} >
                <img src={post.metadata.image.url} alt=""/>
+               </LazyLoad>
                </span>
               <div className="card">
                <Link to={'/' + post.slug}> <h2 className="card-title">{post.title}</h2></Link>
@@ -46,11 +48,13 @@ import Button from './Button';
       this.props ?
       <div className="page">
         <div className="page-overlay">
-          <h1>{ this.props.ads.title}</h1>
-          <p dangerouslySetInnerHTML={{__html:this.props.ads.content}} ></p>
+          <h1>{ this.props.page.title}</h1>
+          <p dangerouslySetInnerHTML={{__html:this.props.page.content}} ></p>
           <Button title={"See more"} />
         </div>
-        <img className="ads-image" src={this.props.ads.metadata? this.props.ads.metadata.image.url : "#" } alt="img"/>
+        <LazyLoad offsetVertical={300} >
+          <img className="ads-image" src={this.props.page.metadata? this.props.page.metadata.image.url : "#" } alt="img"/>
+        </LazyLoad>
         </div>
         :
         <p>No page</p>
@@ -69,7 +73,7 @@ const mapStateToProps = (state) => {
   
   return{
     posts: state.posts.posts.slice(0,5),
-    ads: state.posts.ads,
+    page: state.posts.ads,
   }
 }
 export default connect(mapStateToProps)(Main);
