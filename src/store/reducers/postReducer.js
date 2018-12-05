@@ -1,6 +1,6 @@
 const initState = {
   posts: [] ,
-  categories: ["Film", "Books"],
+  categories: [],
   ads:[],
   category: [],
   link: null,
@@ -15,9 +15,10 @@ const postReducer = (state = initState, action) => {
         const posts = action.data.objects.filter(item => {
             return(item.type_slug === "posts") 
           });
+         
         return{
             ...state,
-            posts: posts.splice(0,5),
+            posts: posts,
             categories: action.data.objects.filter(cat => {
                 return(cat.type_slug === "categories") 
               }),

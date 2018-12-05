@@ -9,7 +9,7 @@ import Button from './Button';
 
  class Main extends Component {
   render() {
-  const { posts } = this.props.posts;
+  const { posts } = this.props;
   const postList = posts.length ? (
       posts.map((post)=> {
           return(
@@ -43,14 +43,14 @@ import Button from './Button';
       </div>
       <hr/>
       {
-      this.props.posts.ads ?
+      this.props ?
       <div className="page">
         <div className="page-overlay">
-          <h1>{ this.props.posts.ads.title}</h1>
-          <p dangerouslySetInnerHTML={{__html:this.props.posts.ads.content}} ></p>
+          <h1>{ this.props.ads.title}</h1>
+          <p dangerouslySetInnerHTML={{__html:this.props.ads.content}} ></p>
           <Button title={"See more"} />
         </div>
-        <img className="ads-image" src={this.props.posts.ads.metadata ? this.props.posts.ads.metadata.image.url : "#" } alt="img"/>
+        <img className="ads-image" src={this.props.ads.metadata? this.props.ads.metadata.image.url : "#" } alt="img"/>
         </div>
         :
         <p>No page</p>
@@ -68,8 +68,8 @@ import Button from './Button';
 const mapStateToProps = (state) => {
   
   return{
-    posts: state.posts,
-    ads: state.ads,
+    posts: state.posts.posts.slice(0,5),
+    ads: state.posts.ads,
   }
 }
 export default connect(mapStateToProps)(Main);
