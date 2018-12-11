@@ -10,7 +10,7 @@
 - CSS
 - (RWD - mobile, tablet, desktop) / css-grid, media
 
-# [DEMO](https://cosmicjs.com/apps/react-cosmedium-blog/demo)
+# [DEMO](https://cosmicjs.com/apps/react-cosmedium-blog)
 ![Tablet](https://github.com/cosmicjs/react-cosmedium-blog/blob/master/img/ipad-pro-mockup-scene.jpeg?raw=true)
 ![mobile-single](https://github.com/cosmicjs/react-cosmedium-blog/blob/master/img/ipad.jpeg?raw=true)
 
