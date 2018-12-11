@@ -1,19 +1,18 @@
 # Blog layout inspired by Medium.com 
 
-![Full](https://github.com/3ndrius/react-blog/blob/master/img/cos.jpeg?raw=true)
+![Full](https://github.com/cosmicjs/cosmedium-react-blog/blob/master/img/cos.jpeg?raw=true)
 
-# Content menagement by CosmicJS
-- ReactJS
-- Redux
+# Includes
+- [Cosmic JS](https://cosmicjs.com/) for content management
+- React for UI
+- Redux for state management
 - HTML
 - CSS
-- AdobeXD
-- (RWD - mobile, tablet, desktop) / css-grid, media 
-- CMS from [Cosmic JS](https://cosmicjs.com/)
+- (RWD - mobile, tablet, desktop) / css-grid, media
 
-# [DEMO](https://cosmicjs.com/apps/react-book-app/demo)
-![Tablet](https://github.com/3ndrius/react-blog/blob/master/img/ipad-pro-mockup-scene.jpeg?raw=true)
-![mobile-single](https://github.com/3ndrius/react-blog/blob/master/img/ipad.jpeg?raw=true)
+# [DEMO](https://cosmicjs.com/apps/cosmedium-react-blog/demo)
+![Tablet](https://github.com/cosmicjs/cosmedium-react-blog/blob/master/img/ipad-pro-mockup-scene.jpeg?raw=true)
+![mobile-single](https://github.com/cosmicjs/cosmedium-react-blog/blob/master/img/ipad.jpeg?raw=true)
 
 <hr/>
 
