@@ -1,6 +1,6 @@
 # Blog layout inspired by Medium.com 
 
-![Full](https://github.com/cosmicjs/cosmedium-react-blog/blob/master/img/cos.jpeg?raw=true)
+![Full](https://github.com/cosmicjs/react-cosmedium-blog/blob/master/img/cos.jpeg?raw=true)
 
 # Includes
 - [Cosmic JS](https://cosmicjs.com/) for content management
@@ -10,9 +10,9 @@
 - CSS
 - (RWD - mobile, tablet, desktop) / css-grid, media
 
-# [DEMO](https://cosmicjs.com/apps/cosmedium-react-blog/demo)
-![Tablet](https://github.com/cosmicjs/cosmedium-react-blog/blob/master/img/ipad-pro-mockup-scene.jpeg?raw=true)
-![mobile-single](https://github.com/cosmicjs/cosmedium-react-blog/blob/master/img/ipad.jpeg?raw=true)
+# [DEMO](https://cosmicjs.com/apps/react-cosmedium-blog/demo)
+![Tablet](https://github.com/cosmicjs/react-cosmedium-blog/blob/master/img/ipad-pro-mockup-scene.jpeg?raw=true)
+![mobile-single](https://github.com/cosmicjs/react-cosmedium-blog/blob/master/img/ipad.jpeg?raw=true)
 
 <hr/>
 
@@ -21,8 +21,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Installation
 ```
-git clone https://github.com/cosmicjs/cosmedium-react-blog
-cd cosmedium-react-blog
+git clone https://github.com/cosmicjs/react-cosmedium-blog
+cd react-cosmedium-blog
 npm i
 npm start
 ```
