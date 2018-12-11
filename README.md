@@ -1,35 +1,31 @@
 # Blog layout inspired by Medium.com 
 
-![Full](https://github.com/3ndrius/react-blog/blob/master/img/cos.jpeg?raw=true)
+![Full](https://github.com/cosmicjs/react-cosmedium-blog/blob/master/img/cos.jpeg?raw=true)
 
-# Content menagement by CosmicJS
-- ReactJS
-- Redux
+# Includes
+- [Cosmic JS](https://cosmicjs.com/) for content management
+- React for UI
+- Redux for state management
 - HTML
 - CSS
-- AdobeXD
-- (RWD - mobile, tablet, desktop) / css-grid, media 
-- CMS from [Cosmic JS](https://cosmicjs.com/)
+- (RWD - mobile, tablet, desktop) / css-grid, media
 
-# [DEMO](https://cosmicjs.com/apps/react-book-app/demo)
-![Tablet](https://github.com/3ndrius/react-blog/blob/master/img/ipad-pro-mockup-scene.jpeg?raw=true)
-![mobile-single](https://github.com/3ndrius/react-blog/blob/master/img/ipad.jpeg?raw=true)
-
-
-
+# [DEMO](https://cosmicjs.com/apps/react-cosmedium-blog/demo)
+![Tablet](https://github.com/cosmicjs/react-cosmedium-blog/blob/master/img/ipad-pro-mockup-scene.jpeg?raw=true)
+![mobile-single](https://github.com/cosmicjs/react-cosmedium-blog/blob/master/img/ipad.jpeg?raw=true)
 
 <hr/>
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
+## Installation
+```
+git clone https://github.com/cosmicjs/react-cosmedium-blog
+cd react-cosmedium-blog
+npm i
+npm start
+```
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
@@ -50,19 +46,8 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-# react-shop
