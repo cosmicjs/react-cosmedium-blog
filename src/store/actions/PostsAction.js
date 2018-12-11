@@ -3,7 +3,7 @@ export const FetchPostsApi = () => {
             const Cosmic = require('cosmicjs')
             var api = new Cosmic();
             var bucket = api.bucket({
-              slug: process.env.REACT_APP_COSMIC_BUCKET || 'cosmedium-react-blog',
+              slug: process.env.REACT_APP_COSMIC_BUCKET || 'react-cosmedium-blog',
               read_key: process.env.REACT_APP_COSMIC_READ_KEY || ''
             })
             bucket.getObjects().then(data => {          
